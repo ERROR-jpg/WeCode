@@ -4,7 +4,10 @@
 
 <header>
     <img src= {imageSrc} alt="Logo"/>
+    
 </header>
+  
+
 
 <style>
   header{
