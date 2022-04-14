@@ -16,7 +16,7 @@
   
   <div class="side-bar">
     <i on:click={downloadCode} class="fa fa-download icons" />
-    <i on:click={() => (window.location.href = "/")} class="fa fa-plus icons" />
+    <i on:click={() => (window.open('/'))} class="fa fa-plus icons" />
     <button on:click={submitCode}>RUN</button>
     
 

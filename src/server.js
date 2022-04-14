@@ -11,9 +11,17 @@ compiler.init(option);
 
 
 
-app.use(express.static('public'));
-app.get('*',(req,res)=>{
-    return res.sendFile(path.resolve(__dirname,'public','index.html')); 
+
+
+app.get('',(req,res)=>{
+    app.use(express.static('pages'));
+    res.sendFile(path.resolve(__dirname,'pages','home.html')); 
+
+app.get('/startcodepage',(req,res)=>{
+    app.use(express.static('public'));
+    return res.sendFile(path.resolve("./",'public','index.html')); 
+});
+
 });
     app.post("/compile",(request,response)=>{
         console.log("RECEIVED");
