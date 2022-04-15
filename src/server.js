@@ -31,7 +31,7 @@ app.get('/startcodepage',(req,res)=>{
         var withinput=request.body.withinput;
         var code=request.body.code;
         if(lang==='C'||lang==='Cpp '){
-            var envData={OS: "windows", cmd: "g++" , options:{timeout:1000}};
+            var envData={OS: "windows", cmd: "g++" , options:{timeout:10000}};
             if(withinput){
                 
                 compiler.compileCPPWithInput(envData,code,input,function (data) {
@@ -47,7 +47,7 @@ app.get('/startcodepage',(req,res)=>{
         }
 
         if(lang==='Python'){
-            var envData={OS: "windows",  options:{timeout:1000}};
+            var envData={OS: "windows",  options:{timeout:10000}};
             if(withinput){
                 
                 compiler.compilePythonWithInput(envData,code,input,function (data) {
@@ -63,7 +63,7 @@ app.get('/startcodepage',(req,res)=>{
         }
 
         if(lang==='Java'){
-            var envData={OS: "windows",  options:{timeout:1000}};
+            var envData={OS: "windows",  options:{timeout:10000}};
             if(withinput){
                 
                 compiler.compileJavaWithInput(envData,code,input,function (data) {
