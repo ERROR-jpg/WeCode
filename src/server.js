@@ -32,7 +32,7 @@ app.get('/startcodepage',(req,res)=>{
         var withinput=request.body.withInput;
         var code=request.body.code;
         if(lang==='C'||lang==='Cpp '){
-            var envData={OS: "windows", cmd: "g++" , options:{timeout:1000}};
+            var envData={OS: "windows", cmd: "g++" , options:{timeout:10000}};
             if(withinput){
                 
                 compiler.compileCPPWithInput(envData,code,input,function (data) {
@@ -48,8 +48,13 @@ app.get('/startcodepage',(req,res)=>{
         }
 
         if(lang==='Python'){
+<<<<<<< HEAD
             var envData={OS: "windows",  options:{timeout:1000}};
             if(withinput ){
+=======
+            var envData={OS: "windows",  options:{timeout:10000}};
+            if(withinput){
+>>>>>>> 873047a4425e48420e049fe462124ff6b021b721
                 
                 compiler.compilePythonWithInput(envData,code,input,function (data) {
                    return response.json(data);
@@ -64,7 +69,7 @@ app.get('/startcodepage',(req,res)=>{
         }
 
         if(lang==='Java'){
-            var envData={OS: "windows",  options:{timeout:1000}};
+            var envData={OS: "windows",  options:{timeout:10000}};
             if(withinput){
                 
                 compiler.compileJavaWithInput(envData,code,input,function (data) {
