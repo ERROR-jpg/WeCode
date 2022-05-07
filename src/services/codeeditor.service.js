@@ -5,7 +5,8 @@ export const InitEditor = (id) => {
    let editor =  CodeMirror(document.getElementById(id), {
         lineNumbers: true,
         theme: "dracula",
-        mode: "javascript",
+        mode: "python"
+        
     });
    editor.setSize("100%", "100%");
 

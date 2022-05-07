@@ -19,9 +19,11 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
+    "codemirror": "^5.65.3",
     "compilex": "^0.7.4",
     "express": "^4.17.3",
     "sirv-cli": "^2.0.0",
+    "svelte-split-pane": "^0.1.2",
     "svelte-switch": "^0.0.5"
   }
 }

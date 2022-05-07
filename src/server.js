@@ -28,7 +28,8 @@ app.get('/startcodepage',(req,res)=>{
         console.log(request.body);
         var lang=request.body.lang;
         var input=request.body.input;
-        var withinput=request.body.withinput;
+        console.log(input);
+        var withinput=request.body.withInput;
         var code=request.body.code;
         if(lang==='C'||lang==='Cpp '){
             var envData={OS: "windows", cmd: "g++" , options:{timeout:1000}};
@@ -48,7 +49,7 @@ app.get('/startcodepage',(req,res)=>{
 
         if(lang==='Python'){
             var envData={OS: "windows",  options:{timeout:1000}};
-            if(withinput){
+            if(withinput ){
                 
                 compiler.compilePythonWithInput(envData,code,input,function (data) {
                    return response.json(data);
@@ -85,4 +86,9 @@ app.get('/startcodepage',(req,res)=>{
 
 
      });
+
+     compiler.flush(function(){
+        console.log('All temporary files flushed !'); 
+        });
+   
 app.listen(port,()=>console.log(`Listening port ${port}`));

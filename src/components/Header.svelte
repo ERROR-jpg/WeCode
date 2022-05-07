@@ -2,7 +2,7 @@
     export let imageSrc
 </script>
 
-<header>
+<header id="heading">
     <img src= {imageSrc} alt="Logo"/>
     
 </header>
@@ -13,7 +13,7 @@
   header{
     height: 5%;
     widows: 100%;
-    background: #30353e;
+    background: #262a32;
     }
 
   header img{

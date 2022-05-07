@@ -3,26 +3,51 @@
 	import SideNav from "./components/SideNav.svelte";
 	import CodeEditor from "./components/CodeEditor.svelte";
 	import CompileDetails from "./components/Compile.svelte";
+	import { HSplitPane, VSplitPane } from 'svelte-split-pane';
+
+	
+    
   </script>
   
   <Header imageSrc="images/wecode2.png" />
+  <div class="topbar">
+	 <SideNav />
+	</div>
+ 
+
+  <VSplitPane   minTopPaneSize=50px minDownPaneSize=50px>
+  <top slot="top">
   <div class="wrapper">
 	<CodeEditor />
-	<SideNav />
+	
   </div>
-  <div class="input">
+  </top>
+  <down slot="down">
+ 
+  
 	<CompileDetails/>
-  </div>
+
+  
+  </down>
+ 
+  </VSplitPane>
   
   <style>
+
+	top,down{
+    width: 100%;
+    height: 100%;
+    min-height: 20%;
+    display: block;
+    text-align: left;
+    margin: auto;
+	}
 	.wrapper {
-	  display: flex;
-	  height: 50%;
+	  
+	  height: 100%;
 	}
-	.input{
-		height:70px;
-		width: 100%;
 	
-	}
+
+    
   </style>
   

@@ -4,20 +4,20 @@ import axios from "axios";
 import { get_current_component } from "svelte/internal";
 
 
-export const submit= async (e)=>{
+export const submit= async ()=>{
     let code=get(EditorStore).getValue();
     //console.log(code);
     let lang=document.getElementById('lang').value;
     //console.log(lang);
-    let withinput=e;
-   // console.log(withinput);
-    let input=document.getElementById('input').value;
-   // console.log(input);
+    let withInput=document.getElementById('withInput').checked;
+    console.log(withInput);
+    let input=document.getElementById('inputdata').value;
+    console.log(input);
 
     const payload={
         code,
         lang,
-        withinput,
+        withInput,
         input
     };
 
@@ -26,14 +26,16 @@ export const submit= async (e)=>{
     if(data.output)
     {
         
-        document.getElementById('output').style.backgroundColor="lightgreen";
+        document.getElementById('output').style.backgroundColor="#0d5e58";
         document.getElementById('output').innerHTML=data.output;
+        document.getElementById('heading').style.backgroundColor="#0d5e58";
     }
     else
     {
         console.log(data.error);
-        document.getElementById('output').style.backgroundColor="#ffcccb";
-        document.getElementById('output').innerHTML=data.error;;
+        document.getElementById('output').style.backgroundColor="#760430ed";
+        document.getElementById('output').innerHTML=data.error;
+        document.getElementById('heading').style.backgroundColor="#760430ed";
     }
      
     
