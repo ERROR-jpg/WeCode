@@ -41,10 +41,7 @@
     <option value="java">Java</option>
     </select>
   
-    <label class="switch">
-      INPUT:
-     <input type="checkbox" value ="dsd" id="withInput">
-    </label>
+    
   </i>
   <div class="download_newsession">
     <i on:click={downloadCode} class="fa fa-download icons" />
