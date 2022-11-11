@@ -12286,7 +12286,6 @@ var app = (function () {
         const payload={
             code,
             lang,
-            withInput,
             input
         };
 
@@ -12325,13 +12324,9 @@ var app = (function () {
     	let option2;
     	let option3;
     	let t5;
-    	let label;
-    	let t6;
-    	let input;
-    	let t7;
     	let div0;
     	let i2;
-    	let t8;
+    	let t6;
     	let i3;
     	let mounted;
     	let dispose;
@@ -12352,46 +12347,36 @@ var app = (function () {
     			option3 = element("option");
     			option3.textContent = "Java";
     			t5 = space();
-    			label = element("label");
-    			t6 = text("INPUT:\r\n     ");
-    			input = element("input");
-    			t7 = space();
     			div0 = element("div");
     			i2 = element("i");
-    			t8 = space();
+    			t6 = space();
     			i3 = element("i");
     			attr_dev(i0, "class", "fa fa-play icons svelte-7pw0no");
     			add_location(i0, file$5, 33, 4, 832);
     			option0.__value = "cpp17";
     			option0.value = option0.__value;
     			add_location(option0, file$5, 37, 4, 1004);
-    			option1.__value = "cpp17 ";
+    			option1.__value = "cpp17";
     			option1.value = option1.__value;
     			add_location(option1, file$5, 38, 4, 1042);
     			option2.__value = "python3";
     			option2.value = option2.__value;
-    			add_location(option2, file$5, 39, 4, 1083);
+    			add_location(option2, file$5, 39, 4, 1082);
     			option3.__value = "java";
     			option3.value = option3.__value;
-    			add_location(option3, file$5, 40, 4, 1128);
+    			add_location(option3, file$5, 40, 4, 1127);
     			attr_dev(select, "class", "lang svelte-7pw0no");
     			attr_dev(select, "name", "lang");
     			attr_dev(select, "id", "lang");
     			add_location(select, file$5, 36, 4, 929);
-    			attr_dev(input, "type", "checkbox");
-    			input.value = "dsd";
-    			attr_dev(input, "id", "withInput");
-    			add_location(input, file$5, 45, 5, 1230);
-    			attr_dev(label, "class", "switch svelte-7pw0no");
-    			add_location(label, file$5, 43, 4, 1187);
     			attr_dev(i1, "class", "fa fa-icons-play");
     			add_location(i1, file$5, 35, 4, 895);
     			attr_dev(i2, "class", "fa fa-download icons svelte-7pw0no");
-    			add_location(i2, file$5, 49, 4, 1346);
+    			add_location(i2, file$5, 46, 4, 1237);
     			attr_dev(i3, "class", "fa fa-plus icons svelte-7pw0no");
-    			add_location(i3, file$5, 50, 4, 1410);
+    			add_location(i3, file$5, 47, 4, 1301);
     			attr_dev(div0, "class", "download_newsession svelte-7pw0no");
-    			add_location(div0, file$5, 48, 2, 1307);
+    			add_location(div0, file$5, 45, 2, 1198);
     			attr_dev(div1, "class", "side-bar svelte-7pw0no");
     			add_location(div1, file$5, 31, 2, 798);
     		},
@@ -12408,14 +12393,10 @@ var app = (function () {
     			append_dev(select, option1);
     			append_dev(select, option2);
     			append_dev(select, option3);
-    			append_dev(i1, t5);
-    			append_dev(i1, label);
-    			append_dev(label, t6);
-    			append_dev(label, input);
-    			append_dev(div1, t7);
+    			append_dev(div1, t5);
     			append_dev(div1, div0);
     			append_dev(div0, i2);
-    			append_dev(div0, t8);
+    			append_dev(div0, t6);
     			append_dev(div0, i3);
 
     			if (!mounted) {

@@ -16,7 +16,6 @@ export const submit= async ()=>{
     const payload={
         code,
         lang,
-        withInput,
         input
     };
 
