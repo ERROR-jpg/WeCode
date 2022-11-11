@@ -7,7 +7,7 @@ const app=express();
 const path=require('path');
 app.use(express.urlencoded({extended:true}));
 app.use(express.json()); 
-const port =3000;
+
 var option= {stats:true};
 compiler.init(option);
 
@@ -136,4 +136,4 @@ app.get('/image',(req,res)=>{
         console.log('All temporary files flushed !'); 
         });
    
-app.listen(port,()=>console.log(`Listening port ${port}`));
+app.listen(process.env.PORT || 3000,()=>console.log("Listening port 3000"));
