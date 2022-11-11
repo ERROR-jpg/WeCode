@@ -34,6 +34,7 @@ app.get('/image',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'pages','wecode4.png')); 
      
 });
+
     app.post("/compile",(request,response)=>{
         console.log("RECEIVED");
         console.log(request.body);

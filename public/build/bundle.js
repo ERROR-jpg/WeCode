@@ -12279,8 +12279,7 @@ var app = (function () {
         //console.log(code);
         let lang=document.getElementById('lang').value;
         //console.log(lang);
-        let withInput=document.getElementById('withInput').checked;
-        console.log(withInput);
+        
         let input=document.getElementById('inputdata').value;
         console.log(input);
 
