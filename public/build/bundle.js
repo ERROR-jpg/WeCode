@@ -10496,14 +10496,18 @@ var app = (function () {
        let editor =  CodeMirror(document.getElementById(id), {
             lineNumbers: true,
             theme: "dracula",
-            mode: "python"
+            mode: "javascript"
             
         });
        editor.setSize("100%", "100%");
-
+       let text = String.raw`#include<iostream>
+   int main()
+ {
+   printf("HELLO FROM WeCode\n");
+ }`;
        let dbRef = InitFireBase();
        Firepad.fromCodeMirror(dbRef, editor, {
-        defaultText: "// Write your code here ",
+        defaultText: text,
       });
 
        EditorStore.set(editor);
@@ -12292,16 +12296,16 @@ var app = (function () {
         if(data.output)
         {
             
-            document.getElementById('output').style.backgroundColor="#0d5e58";
+            // document.getElementById('output').style.backgroundColor="#0d5e58";
             document.getElementById('output').innerHTML=data.output;
-            document.getElementById('heading').style.backgroundColor="#0d5e58";
+            // document.getElementById('heading').style.backgroundColor="#0d5e58";
         }
         else
         {
             console.log(data.error);
-            document.getElementById('output').style.backgroundColor="#760430ed";
+            // document.getElementById('output').style.backgroundColor="#760430ed";
             document.getElementById('output').innerHTML=data.error;
-            document.getElementById('heading').style.backgroundColor="#760430ed";
+            // document.getElementById('heading').style.backgroundColor="#760430ed";
         }
          
         
@@ -12359,18 +12363,18 @@ var app = (function () {
     			i3 = element("i");
     			attr_dev(i0, "class", "fa fa-play icons svelte-7pw0no");
     			add_location(i0, file$5, 33, 4, 832);
-    			option0.__value = "C";
+    			option0.__value = "cpp17";
     			option0.value = option0.__value;
     			add_location(option0, file$5, 37, 4, 1004);
-    			option1.__value = "Cpp ";
+    			option1.__value = "cpp17 ";
     			option1.value = option1.__value;
-    			add_location(option1, file$5, 38, 4, 1038);
-    			option2.__value = "Python";
+    			add_location(option1, file$5, 38, 4, 1042);
+    			option2.__value = "python3";
     			option2.value = option2.__value;
-    			add_location(option2, file$5, 39, 4, 1077);
-    			option3.__value = "Java";
+    			add_location(option2, file$5, 39, 4, 1083);
+    			option3.__value = "java";
     			option3.value = option3.__value;
-    			add_location(option3, file$5, 40, 4, 1121);
+    			add_location(option3, file$5, 40, 4, 1128);
     			attr_dev(select, "class", "lang svelte-7pw0no");
     			attr_dev(select, "name", "lang");
     			attr_dev(select, "id", "lang");
@@ -12378,17 +12382,17 @@ var app = (function () {
     			attr_dev(input, "type", "checkbox");
     			input.value = "dsd";
     			attr_dev(input, "id", "withInput");
-    			add_location(input, file$5, 45, 5, 1223);
+    			add_location(input, file$5, 45, 5, 1230);
     			attr_dev(label, "class", "switch svelte-7pw0no");
-    			add_location(label, file$5, 43, 4, 1180);
+    			add_location(label, file$5, 43, 4, 1187);
     			attr_dev(i1, "class", "fa fa-icons-play");
     			add_location(i1, file$5, 35, 4, 895);
     			attr_dev(i2, "class", "fa fa-download icons svelte-7pw0no");
-    			add_location(i2, file$5, 49, 4, 1339);
+    			add_location(i2, file$5, 49, 4, 1346);
     			attr_dev(i3, "class", "fa fa-plus icons svelte-7pw0no");
-    			add_location(i3, file$5, 50, 4, 1403);
+    			add_location(i3, file$5, 50, 4, 1410);
     			attr_dev(div0, "class", "download_newsession svelte-7pw0no");
-    			add_location(div0, file$5, 48, 2, 1300);
+    			add_location(div0, file$5, 48, 2, 1307);
     			attr_dev(div1, "class", "side-bar svelte-7pw0no");
     			add_location(div1, file$5, 31, 2, 798);
     		},

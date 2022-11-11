@@ -5,14 +5,18 @@ export const InitEditor = (id) => {
    let editor =  CodeMirror(document.getElementById(id), {
         lineNumbers: true,
         theme: "dracula",
-        mode: "python"
+        mode: "javascript"
         
     });
    editor.setSize("100%", "100%");
-
+   let text = String.raw`#include<iostream>
+   int main()
+ {
+   printf("HELLO FROM WeCode\n");
+ }`
    let dbRef = InitFireBase();
    Firepad.fromCodeMirror(dbRef, editor, {
-    defaultText: "// Write your code here ",
+    defaultText: text,
   });
 
    EditorStore.set(editor);

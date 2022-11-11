@@ -35,10 +35,10 @@
     
     <i class='fa fa-icons-play'>
     <select  class="lang" name="lang" id="lang" on:change={langChanged} >
-    <option value="C">C</option>
-    <option value="Cpp ">Cpp</option>
-    <option value="Python">Python</option>
-    <option value="Java">Java</option>
+    <option value="cpp17">C</option>
+    <option value="cpp17 ">Cpp</option>
+    <option value="python3">Python</option>
+    <option value="java">Java</option>
     </select>
   
     <label class="switch">
